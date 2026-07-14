@@ -1,0 +1,43 @@
+using System;
+delegate void Operation(int a, int b);
+class Calculate
+{
+    public void Add(int a, int b)
+    {
+        Console.WriteLine("Addition: " + (a + b));
+    }
+    public void Sub(int a, int b)
+    {
+        Console.WriteLine("Subtraction: " + (a - b));
+    }
+    public void Multipy(int a, int b)
+    {
+        Console.WriteLine("Multipy: " + (a * b));
+    }
+    public void Divide(int a, int b)
+    {
+        Console.WriteLine("Divide: " + (a / b));
+    }
+}
+public class Class1
+{
+    static void Main()
+    {
+        Calculate c = new Calculate();
+        Operation obj;
+
+        obj = c.Add;
+        obj(10, 20);
+
+        obj = c.Sub;
+        obj(20, 10);
+
+        obj = c.Multipy;
+        obj(30, 20);
+
+        obj = c.Divide;
+        obj(60, 20);
+
+        Console.Write("Akansha T038");
+    }
+}
