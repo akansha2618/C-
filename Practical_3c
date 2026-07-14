@@ -1,0 +1,38 @@
+using System;
+using System.Data;
+class BankAccount
+{
+    public int AccountNumber { get; set;}
+    private double balance;
+    public double Balance
+    {
+        get
+        {
+            return balance;
+        }
+        set
+        {
+            if (value >= 0)
+                balance = value;
+            else
+                Console.WriteLine("Balance cannot be negative");
+        }
+    }
+
+}
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        BankAccount b=new BankAccount();
+        b.AccountNumber = 1011;
+        b.Balance = 90000;
+
+        Console.WriteLine("Account Number: " + b.AccountNumber);
+        Console.WriteLine("Balance: " + b.Balance);
+
+        b.Balance = -1000;
+        Console.WriteLine("Akansha T038");
+
+    }
+}
